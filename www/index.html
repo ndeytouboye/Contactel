@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactel</title>
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="cordova.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+    <!--liste contact-->
+    <div data-role="page" id="homePage">
+        <div data-role="header">
+            <h1 id="title">Contactel</h1>
+        </div>
+        <div>
+            <a href="#addContactPage" data-transition="slidedown" data-role="button" data-icon="plus" data-iconpos="notext-right">Ajouter</a>
+            <ul id="contactList" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Recherche contact..." >
+
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>M1IABD &copy; 2024</h1>
+        </div>
+    </div>
+
+
+    <!-- ajout -->
+    <div data-role="page" id="addContactPage">
+        <div data-role="header">
+            <h1>Contactel</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#homePage" data-transition="slideup" data-role="button" data-icon="home" data-iconpos="notext">Retour</a> 
+            <form id="addContactForm">
+                <label for="prenom">Prenom</label>
+                <input value="" type="text" name="prenom">
+                <label for="nom">Nom</label>
+                <input value="" type="text" name="nom">
+                <label for="address">Adresse</label>
+                <input value="" type="text" name="address">
+                <label for="numero">Numéro</label>
+                <input value="" type="number" name="numero" min="111111111" required>
+                <button data-role="button" id="btn-add">Ajouter</button>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>M1IABD &copy; 2024</h1>
+        </div>
+    </div>
+
+       <!-- page details-->
+    <div data-role="page" id="detailsContactPage">
+        <div data-role="header">
+            <h1>Contactel</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#homePage" data-transition="pop" data-role="button" data-icon="home" data-iconpos="notext">Retour</a>
+            <img src="img/contact.jpeg" width="100">
+            <form id="detailContactForm">
+                <label for="prenom">Prenom</label>
+                <label for="nom">Nom</label>
+                <input type="text" name="nom">
+                <input type="text" name="prenom">
+                <label for="address">Adresse</label>
+                <input type="text" name="address">
+                <label for="numero">Numéro</label>
+                <input type="number" name="numero" >
+            </form>
+            <button data-role="button" data-icon="delete" data-iconpos="left" id="btn-delete" onclick="deleteContact()">Supprimer</button>
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>M1IABD &copy; 2024</h1>
+        </div>
+    </div>
+
+    
+</body>
+</html>

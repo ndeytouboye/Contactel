@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+label{
+    text-align: center;
+}
+.termine{
+    text-decoration: line-through;
+}
+
+.ui-content div[data-role=header]
+{
+    border-radius: 20px;
+}
